@@ -1,0 +1,78 @@
+<!DOCTYPE html><html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>N'guettia Service | Trouvez vos clients</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50 font-sans"><!-- NAVBAR --><nav class="bg-white shadow fixed w-full z-50">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+    <h1 class="font-bold text-xl text-green-600">N'guettia Service</h1>
+    <a href="#devis" class="bg-green-600 text-white px-4 py-2 rounded-xl">Devis Gratuit</a>
+  </div>
+</nav><!-- HERO --><section class="h-screen flex items-center justify-center text-center bg-gradient-to-r from-green-600 to-green-400 text-white px-6">
+  <div>
+    <h2 class="text-4xl md:text-5xl font-bold mb-4">Besoin d’un artisan fiable ?</h2>
+    <p class="mb-6 text-lg">Peinture • Électricité • Décoration rapide et professionnelle</p>
+    <a href="#devis" class="bg-white text-green-600 px-8 py-3 rounded-xl font-semibold shadow">Obtenir un devis gratuit</a>
+  </div>
+</section><!-- PREUVE SOCIALE --><section class="py-10 bg-white text-center">
+  <h3 class="text-xl font-bold mb-4">+100 clients satisfaits en Côte d’Ivoire</h3>
+  <p class="text-gray-600">Travaux réalisés avec qualité et respect des délais</p>
+</section><!-- SERVICES --><section class="py-16 px-6 max-w-7xl mx-auto">
+  <h2 class="text-3xl font-bold text-center mb-10">Nos Services</h2>
+  <div class="grid md:grid-cols-3 gap-8"><div class="bg-white p-6 rounded-2xl shadow">
+  <i class="fas fa-paint-roller text-green-600 text-3xl mb-4"></i>
+  <h3 class="font-bold text-xl mb-2">Peinture</h3>
+  <p>Maison, bureau, extérieur avec finition haut niveau</p>
+</div>
+
+<div class="bg-white p-6 rounded-2xl shadow">
+  <i class="fas fa-bolt text-green-600 text-3xl mb-4"></i>
+  <h3 class="font-bold text-xl mb-2">Électricité</h3>
+  <p>Installation rapide et sécurisée</p>
+</div>
+
+<div class="bg-white p-6 rounded-2xl shadow">
+  <i class="fas fa-couch text-green-600 text-3xl mb-4"></i>
+  <h3 class="font-bold text-xl mb-2">Décoration</h3>
+  <p>Design moderne et personnalisé</p>
+</div>
+
+  </div>
+</section><!-- OFFRE --><section class="bg-green-600 text-white text-center py-12">
+  <h2 class="text-3xl font-bold mb-4">🎯 Devis GRATUIT en moins de 10 minutes</h2>
+  <p>Réponse rapide sur WhatsApp</p>
+</section><!-- FORMULAIRE DE LEADS --><section id="devis" class="py-16 px-6 bg-white">
+  <h2 class="text-3xl font-bold text-center mb-10">Demande de Devis</h2>
+  <div class="max-w-2xl mx-auto"><form onsubmit="sendToWhatsApp(event)" class="grid gap-4">
+  <input id="nom" type="text" placeholder="Nom" class="p-3 border rounded" required>
+  <input id="tel" type="text" placeholder="Téléphone" class="p-3 border rounded" required>
+  <select id="service" class="p-3 border rounded">
+    <option>Peinture</option>
+    <option>Électricité</option>
+    <option>Décoration</option>
+  </select>
+  <textarea id="message" placeholder="Décris ton besoin" class="p-3 border rounded" rows="4"></textarea>
+  <button class="bg-green-600 text-white py-3 rounded-xl">Envoyer sur WhatsApp</button>
+</form>
+
+  </div>
+</section><!-- WHATSAPP SCRIPT --><script>
+function sendToWhatsApp(e) {
+  e.preventDefault(); 
+  let nom = document.getElementById('nom').value;
+  let tel = document.getElementById('tel').value;
+  let service = document.getElementById('service').value;
+  let message = document.getElementById('message').value;
+
+  let url = https://wa.me/2250779948903?text=Bonjour je m'appelle ${nom}, Téléphone: ${tel}, Service: ${service}, Besoin: ${message};
+  window.open(url, '_blank');
+}
+</script><!-- URGENCE --><section class="text-center py-10 bg-gray-100">
+  <p class="text-lg font-semibold">⚡ Intervention rapide - Disponible immédiatement</p>
+</section><!-- FOOTER --><footer class="bg-green-600 text-white text-center p-6">
+  <p>© 2026 N'guettia Service - Tous droits réservés</p>
+</footer></body>
+</html>
